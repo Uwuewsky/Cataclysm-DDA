@@ -1878,9 +1878,14 @@ TEST_CASE( "zone_sorting_no_grab_weight_gate",
     // Backpack for stashing items (large volume, won't be the bottleneck)
     dummy.worn.wear_item( dummy, item( itype_backpack ), false, false );
 
-    // With default str 8: weight_capacity = 13 + 8*4 = 45 kg.
-    // Each boulder is 10 kg.  After picking up 4 (40 kg), the fifth would
-    // push carried weight to 50 kg > 45 kg, so the weight gate should block it.
+    // Use a below-average STR to cover weaker characters (Refugee Center
+    // beggars and similar NPCs can have very poor stats).
+    // str 6: weight_capacity = 13 + 6*4 = 37 kg.
+    // Each boulder is 10 kg.  After picking up 3 (30 kg), the fourth would
+    // push carried weight to 40 kg > 37 kg, so the weight gate should block it.
+    dummy.str_max = 6;
+    dummy.str_cur = 6;
+    dummy.set_str_bonus( 0 );
     const int num_boulders = 5;
 
     // Source: UNSORTED at player position

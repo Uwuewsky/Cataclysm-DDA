@@ -535,7 +535,7 @@
     "looks_like": "stanag10",
     "type": "ITEM",
     "subtypes": [ "MAGAZINE" ],
-    "name": { "str": "10 round SL8 magazine" },
+    "name": { "str": "SL8-6 magazine" },
     "description": "A single stack magazine for the SL8 rifle, holding 10 rounds.",
     "weight": "70 g",
     "volume": "132 ml",

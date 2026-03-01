@@ -195,16 +195,8 @@
     "looks_like": "glock17_17",
     "type": "ITEM",
     "subtypes": [ "MAGAZINE" ],
-    "name": { "str": "USP .45 pistol 12-round magazine" },
+    "name": { "str": "USP .45 12-round magazine" },
     "description": "A 12-round magazine for use with the USP pistol.",
-    "variant_type": "gun",
-    "variants": [
-      {
-        "id": "usp45mag",
-        "name": { "str": "USP .45 12-round magazine" },
-        "description": "A standard capacity magazine for use with the H&K USP handgun."
-      }
-    ],
     "weight": "99 g",
     "volume": "116 ml",
     "longest_side": "130 mm",
@@ -282,16 +274,8 @@
     "looks_like": "glock17_17",
     "type": "ITEM",
     "subtypes": [ "MAGAZINE" ],
-    "name": { "str": "PPQ .45 12-round magazine" },
+    "name": { "str": "Walther PPQ .45 12-round magazine" },
     "description": "A 12-round steel box magazine for the PPQ pistol.",
-    "variant_type": "gun",
-    "variants": [
-      {
-        "id": "ppq45mag",
-        "name": { "str": "PPQ .45 ACP 12-round magazine" },
-        "description": "A 12-round steel box magazine for the Walther PPQ .45 ACP."
-      }
-    ],
     "weight": "80 g",
     "volume": "105 ml",
     "longest_side": "128 mm",
@@ -332,14 +316,6 @@
     "subtypes": [ "MAGAZINE" ],
     "name": { "str": "Glock .45 13-round magazine" },
     "description": "A 13-round magazine for use with Glock firearms chambered in .45 ACP.",
-    "variant_type": "gun",
-    "variants": [
-      {
-        "id": "glock_21mag",
-        "name": { "str": "Glock 21 13-round magazine" },
-        "description": "A standard capacity magazine for use with the Glock 21."
-      }
-    ],
     "weight": "85 g",
     "volume": "114 ml",
     "longest_side": "125 mm",
@@ -360,14 +336,6 @@
     "subtypes": [ "MAGAZINE" ],
     "name": { "str": "Glock .45 10-round magazine" },
     "description": "A 10-round magazine for use with Glock firearms chambered in .45 ACP.",
-    "variant_type": "gun",
-    "variants": [
-      {
-        "id": "glock_21mag_10",
-        "name": { "str": "Glock 21 10-round magazine" },
-        "description": "A 10-round magazine for use with the Glock 21."
-      }
-    ],
     "copy-from": "glock_21mag",
     "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "45": 10 } } ]
   },
@@ -379,14 +347,6 @@
     "subtypes": [ "MAGAZINE" ],
     "name": { "str": "Glock .45 26-round magazine" },
     "description": "A 26-round magazine for use with Glock firearms chambered in .45 ACP.",
-    "variant_type": "gun",
-    "variants": [
-      {
-        "id": "glock_21mag26",
-        "name": { "str": "Glock 21 26-round magazine" },
-        "description": "A double-capacity magazine for use with the Glock 21."
-      }
-    ],
     "weight": "159 g",
     "volume": "205 ml",
     "longest_side": "225 mm",
@@ -404,10 +364,16 @@
     "looks_like": "glock17_17",
     "type": "ITEM",
     "subtypes": [ "MAGAZINE" ],
-    "name": { "str": "Glock 36 magazine" },
+    "name": { "str": "Glock subcompact pistol magazine" },
     "description": "A 6-round magazine for the Glock 36.  Incompatible with other .45 Glocks.",
-    "//": "delete variants from glock 21 mag",
-    "variants": [  ],
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "glock36_mag",
+        "name": { "str": "Glock 36 magazine" },
+        "description": "A 6-round magazine for the Glock 36.  Incompatible with other .45 Glocks."
+      }
+    ],
     "weight": "70 g",
     "volume": "72 ml",
     "copy-from": "glock_21mag",
@@ -418,16 +384,8 @@
     "looks_like": "mp5mag",
     "type": "ITEM",
     "subtypes": [ "MAGAZINE" ],
-    "name": { "str": ".45 WWII SMG 30-round magazine" },
-    "description": "A standard 30-round magazine for the .45 WWII submachine gun.",
-    "variant_type": "gun",
-    "variants": [
-      {
-        "id": "greasegun30mag",
-        "name": { "str": "M3 SMG 30-round magazine" },
-        "description": "A standard 30-round magazine for the M3 submachine gun."
-      }
-    ],
+    "name": { "str": "M3 30-round magazine" },
+    "description": "A standard 30-round magazine for the M3 submachine gun.",
     "weight": "340 g",
     "volume": "227 ml",
     "longest_side": "235 mm",
@@ -445,8 +403,16 @@
     "//": "Audited from IRL measurements.",
     "type": "ITEM",
     "subtypes": [ "MAGAZINE" ],
-    "name": { "str": "M1911 10-round magazine" },
+    "name": { "str": "military handgun 10-round magazine" },
     "description": "An extended 10-round magazine for use with the M1911 handgun.",
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "m1911bigmag",
+        "name": { "str": "M1911 10-round magazine" },
+        "description": "An extended 10-round magazine for use with the M1911 handgun."
+      }
+    ],
     "weight": "79 g",
     "volume": "74 ml",
     "longest_side": "155 mm",
@@ -464,8 +430,16 @@
     "//": "Previous PR, looks good.",
     "type": "ITEM",
     "subtypes": [ "MAGAZINE" ],
-    "name": { "str": "M1911 7-round magazine" },
-    "description": "A military issue 7-round magazine for use with the M1911 handgun.",
+    "name": { "str": "military handgun 7-round magazine" },
+    "description": "A military issue 7-round magazine for use with the .45 handgun.",
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "m1911mag",
+        "name": { "str": "M1911 7-round magazine" },
+        "description": "A military issue 7-round magazine for use with the M1911 handgun."
+      }
+    ],
     "weight": "70 g",
     "volume": "61 ml",
     "longest_side": "132 mm",

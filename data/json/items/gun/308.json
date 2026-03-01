@@ -5,14 +5,14 @@
     "looks_like": "modular_ar15",
     "type": "ITEM",
     "subtypes": [ "GUN" ],
-    "name": { "str": "Belgian battle rifle" },
+    "name": { "str": "FAL battle rifle" },
     "description": "Originally designed during the Cold War, this gun is probably the most successful battle rifle ever designed.  Despite being labeled as obsolete, its tunable gas system ensures both reliability and low recoil, allowing it to keep up even among modern competitors.  This is a semi-automatic clone built by a domestic manufacturer.",
     "variant_type": "gun",
     "variants": [
       {
         "id": "fal_dsa",
         "name": { "str": "DSA SA-58 rifle" },
-        "description": "Originally designed during the Cold War, the FAL is probably the most successful battle rifle ever designed.  Despite being labeled as obsolete, its tunable gas system ensures both reliability and low recoil, allowing the FAL to keep up even among modern competitors.  This is a semi-automatic clone of the SA-58 pattern built by DSA."
+        "description": "Originally designed during the Cold War, this gun is probably the most successful battle rifle ever designed.  Despite being labeled as obsolete, its tunable gas system ensures both reliability and low recoil, allowing it to keep up even among modern competitors.  This is a semi-automatic clone built by a domestic manufacturer."
       }
     ],
     "weight": "4250 g",
@@ -148,16 +148,8 @@
     "looks_like": "modular_ar15",
     "type": "ITEM",
     "subtypes": [ "GUN" ],
-    "name": { "str": "American battle rifle" },
+    "name": { "str": "M1A civilian rifle" },
     "description": "This civilian variant of an American battle rifle is essentially a rifle from World War 2 with a detachable magazine stuck in it that was sold to the military as a cheap, do-all rifle that could replace many other weapon systems.  While it delivered none of those things, it was an acceptable rifle, if marginally inferior to its contemporaries.",
-    "variant_type": "gun",
-    "variants": [
-      {
-        "id": "m1a",
-        "name": { "str": "M1A rifle" },
-        "description": "This civilian variant of the M14 is essentially the M1 Garand from World War 2 with a detachable magazine stuck in it that was sold to the military as a cheap, do-all rifle that could replace many other weapon systems.  While it delivered none of those things, it was an acceptable rifle, if marginally inferior to its contemporaries."
-      }
-    ],
     "weight": "4230 g",
     "volume": "3970 ml",
     "longest_side": "1126 mm",
@@ -262,9 +254,17 @@
     "looks_like": "modular_ar15",
     "type": "ITEM",
     "subtypes": [ "GUN" ],
-    "name": { "str": "FN SCAR-H rifle" },
+    "name": { "str": "SCAR-H assault rifle" },
     "description": "A highly accurate and modular battle rifle specially designed for the United States Special Operations Command.  The 'H' in its name stands for heavy, as it uses the powerful .308 round.",
     "ascii_picture": "scar-H",
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "scar_h",
+        "name": { "str": "FN SCAR-H" },
+        "description": "A highly accurate and modular battle rifle specially designed for the United States Special Operations Command.  The 'H' in its name stands for heavy, as it uses the powerful .308 round."
+      }
+    ],
     "weight": "3630 g",
     "volume": "5427 ml",
     "longest_side": "906 mm",
@@ -296,7 +296,7 @@
     "looks_like": "modular_ar15",
     "type": "ITEM",
     "subtypes": [ "GUN" ],
-    "name": { "str": "FN SCAR-H sniper rifle" },
+    "name": { "str": "SCAR-H sniper rifle" },
     "description": "Sniper Support Rifle, this semi-auto variant of SCAR-H is designed for a long-range precision application, to be used by dedicated marksman.  Includes extended barrel, bipod, and a few additional attachment for greater comfort of a user.",
     "variant_type": "gun",
     "variants": [
@@ -320,7 +320,7 @@
     "looks_like": "modular_ar15",
     "type": "ITEM",
     "subtypes": [ "GUN" ],
-    "name": { "str": "civilian FN SCAR-H rifle" },
+    "name": { "str": "civilian SCAR-H rifle" },
     "description": "A highly accurate and modular battle rifle specially designed for the United States Special Operations Command.  This one is a civilian model, limited to semi-auto.",
     "variant_type": "gun",
     "variants": [
@@ -341,7 +341,7 @@
     "looks_like": "modular_ar15",
     "type": "ITEM",
     "subtypes": [ "GUN" ],
-    "name": { "str": "M24 rifle" },
+    "name": { "str": "M24 sniper rifle" },
     "description": "The M24 Sniper is the military and police version of the Remington Model 700 rifle, M24 being the model name assigned by the United States Army after adoption as their standard sniper rifle in 1988.  The M24 is referred to as a 'weapon system' because it consists of not only a rifle, but also a detachable telescopic sight and other accessories.",
     "weight": "4990 g",
     "volume": "4084 ml",
@@ -436,7 +436,7 @@
     "looks_like": "modular_ar15",
     "type": "ITEM",
     "subtypes": [ "GUN" ],
-    "name": { "str": "PAP AK-style rifle" },
+    "name": { "str": "PAP civilian rifle" },
     "description": "A civilian AK pattern rifle, chambered in 7.62x51mm NATO.",
     "variant_type": "gun",
     "variants": [
@@ -505,8 +505,8 @@
     "looks_like": "modular_ar15",
     "type": "ITEM",
     "subtypes": [ "GUN" ],
-    "name": { "str": "7.62x51mm bullpup rifle" },
-    "description": "This is a semi-automatic bullpup rifle with a lightened body due to the use of polymers and aluminum, using standard magazines of the heavy automatic rifle and a 7.62x51mm cartridge.",
+    "name": { "str": "FAL bullpup rifle" },
+    "description": "This is a semi-automatic bullpup rifle with a lightened body due to the use of polymers and aluminum, using standard magazines of the FAL battle rifle and a 7.62x51mm cartridge.",
     "variant_type": "gun",
     "variants": [
       {

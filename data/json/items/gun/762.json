@@ -5,16 +5,8 @@
     "looks_like": "modular_ar15",
     "type": "ITEM",
     "subtypes": [ "GUN" ],
-    "name": { "str": "AKM rifle" },
-    "description": "One of the most recognizable assault rifles ever made, the AKM is renowned for its durability even under the worst conditions.",
-    "variant_type": "gun",
-    "variants": [
-      {
-        "id": "ak47",
-        "name": { "str": "AKM" },
-        "description": "Arguably the most mass-produced firearm ever made, the AKM has cemented itself in history, and a few country flags.  Designed after WW2, it was meant to replace the PPSh-41's role, but soon became the main infantry rifle.  While many believe it is a copy of the German StG-44, it more resembles an M1 Garand in operation.  Despite it's age, it still sees plenty of use in conflicts today."
-      }
-    ],
+    "name": { "str": "AKM assault rifle" },
+    "description": "Arguably the most mass-produced firearm ever made, the AKM has cemented itself in history, and a few country flags.  Designed after WW2, it was meant to replace the PPSh-41's role, but soon became the main infantry rifle.  While many believe it is a copy of the German StG-44, it more resembles an M1 Garand in operation.  Despite it's age, it still sees plenty of use in conflicts today.",
     "weight": "3402 g",
     "volume": "2167 ml",
     "longest_side": "87 cm",
@@ -89,7 +81,7 @@
     "looks_like": "modular_ar15",
     "type": "ITEM",
     "subtypes": [ "GUN" ],
-    "name": { "str": "AK-47 rifle" },
+    "name": { "str": "AK-47 civilian rifle" },
     "description": "Civilian-legal clones of the AK-47, with no ability to fire full-auto.  Despite lacking that ability, they're still reliable and useful rifles, even if much rarer ammo and magazine wise than the more common AR-15 platform.",
     "variant_type": "gun",
     "variants": [

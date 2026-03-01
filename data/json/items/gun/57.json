@@ -5,7 +5,7 @@
     "looks_like": "glock_17",
     "type": "ITEM",
     "subtypes": [ "GUN" ],
-    "name": { "str": "FN 5.7mm pistol" },
+    "name": { "str": "self-defense sidearm" },
     "description": "Firing the armor-piercing 5.7x28mm round, this lightweight handgun was developed for NATO use as a sidearm capable of penetrating body armor.  Its proprietary and nonprolific ammunition kept it comparatively rare among both civilian and militant use, but the gun's ability to ignore most forms of conventional ballistic armor can't be argued with.  Given that its tiny bullets have next to no stopping power, its armor-penetrating capability comes at a considerable trade-off.",
     "variant_type": "gun",
     "variants": [
@@ -70,8 +70,8 @@
     "looks_like": "glock_17",
     "type": "ITEM",
     "subtypes": [ "GUN" ],
-    "name": { "str": "Ruger-57 handgun" },
-    "description": "Produced by the Ruger gun company, this full-sized pistol makes use of the 5.7x28mm cartridge.  One of the first pistols to both make use of the unusual round and achieve market success within the civilian world, it opened the door for accessible 5.7mm shooting due to its low price and reliable design.",
+    "name": { "str": "lightweight handgun" },
+    "description": "A full-sized polymer framed handgun chambered in the unusual 5.7x28mm cartridge, the Ruger-57 was one of the first commercially available 5.7mm pistols on the market, with its main competitor being FN's decades-old, and far pricier, Five-seveN pistol.  Featuring a lightweight ergonomic design, 1911-style thumb-safety, a high visibility green front-sight with adjustable black rear iron-sights, and a price point which hovered a good 500 dollars below its competition, the Ruger-57 made the comparatively niche 5.7x28mm round far more accessible to a wider margin of potential shooters.",
     "variant_type": "gun",
     "variants": [
       {
@@ -102,7 +102,7 @@
     "copy-from": "fn_p90",
     "type": "ITEM",
     "subtypes": [ "GUN" ],
-    "name": { "str": "semi-automatic P90 carbine" },
+    "name": { "str": "P90 semi-auto carbine" },
     "description": "The civilian version of the older 5.7mm PDW, this carbine features a 16 inch long barrel, feeds from the same 50-round magazines as its predecessor, and is only capable of semi-automatic fire in order to keep it in line with American firearm restrictions.",
     "variant_type": "gun",
     "variants": [

@@ -84,8 +84,16 @@
     "looks_like": "hptcf380mag_10rd",
     "type": "ITEM",
     "subtypes": [ "MAGAZINE" ],
-    "name": { "str": "Hi-Point 3895 10-round magazine" },
-    "description": "A 10-round steel box magazine for use with the Hi-Point 3895 pistol-caliber carbine.  Does not fit the Hi-Point CF-380 pistol.",
+    "name": { "str": "pistol-caliber carbine 10-round magazine" },
+    "description": "A 10-round steel box magazine for use with the .380 carbine.",
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "hpt3895mag_10rd",
+        "name": { "str": "Hi-Point 3895 10-round magazine" },
+        "description": "A 10-round steel box magazine for use with the Hi-Point 3895 pistol-caliber carbine.  Does not fit the Hi-Point CF-380 pistol."
+      }
+    ],
     "copy-from": "hptcf380mag_10rd"
   },
   {
@@ -93,7 +101,7 @@
     "looks_like": "glock17_17",
     "type": "ITEM",
     "subtypes": [ "MAGAZINE" ],
-    "name": { "str": ".380 conceal carry magazine" },
+    "name": { "str": "conceal carry handgun magazine" },
     "description": "A 6-round box magazine for the .380 conceal carry handgun.",
     "variant_type": "gun",
     "variants": [
@@ -120,8 +128,16 @@
     "looks_like": "glock17_17",
     "type": "ITEM",
     "subtypes": [ "MAGAZINE" ],
-    "name": { "str": "Glock 42 magazine" },
+    "name": { "str": "Glock pocket pistol magazine" },
     "description": "A standard 6-round capacity magazine for the Glock 42.",
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "glock42_mag",
+        "name": { "str": "Glock 42 magazine" },
+        "description": "A standard 6-round capacity magazine for the Glock 42."
+      }
+    ],
     "weight": "45 g",
     "volume": "60ml",
     "longest_side": "86 mm",

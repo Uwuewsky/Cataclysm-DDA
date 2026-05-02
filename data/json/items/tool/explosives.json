@@ -162,6 +162,7 @@
       "target": "firecracker_act",
       "msg": "You light the firecracker.",
       "need_fire": 1,
+      "need_wielding": true,
       "menu_text": "Light up"
     }
   },
@@ -196,6 +197,7 @@
       "target_timer": "27 seconds",
       "msg": "You light the pack of firecrackers.",
       "need_fire": 1,
+      "need_wielding": true,
       "menu_text": "Light up"
     }
   },
@@ -1196,6 +1198,7 @@
       "need_wielding": true,
       "target": "homemade_bomb_act",
       "msg": "You light the fuse on the bomb.  Get rid of it quickly!",
+      "need_fire": 1,
       "menu_text": "Light fuse",
       "type": "transform"
     },

@@ -49,7 +49,6 @@
       "need_wielding": true,
       "target": "dynamite_act",
       "msg": "You light the dynamite.",
-      "target_timer": "20 seconds",
       "need_fire": 1,
       "menu_text": "Light fuse",
       "type": "transform"
@@ -65,6 +64,7 @@
     "copy-from": "dynamite",
     "use_action": { "type": "message", "message": "You've already lit the fuse, try throwing it instead.", "name": "Light fuse" },
     "flags": [ "DANGEROUS", "SPAWN_ACTIVE" ],
+    "countdown_interval": "20 seconds",
     "countdown_action": { "type": "explosion", "explosion": { "power": 938 } }
   },
   {
@@ -88,7 +88,6 @@
       "need_wielding": true,
       "target": "dynamite_bomb_act",
       "msg": "You light the dynamite.",
-      "target_timer": "20 seconds",
       "need_fire": 1,
       "menu_text": "Light fuse",
       "type": "transform"
@@ -104,6 +103,7 @@
     "copy-from": "dynamite_bomb",
     "use_action": { "type": "message", "message": "You've already lit the fuse.  Get rid of it and clear out!", "name": "Light fuse" },
     "flags": [ "DANGEROUS", "SPAWN_ACTIVE" ],
+    "countdown_interval": "20 seconds",
     "countdown_action": { "type": "explosion", "explosion": { "power": 938, "shrapnel": { "casing_mass": 1597, "fragment_mass": 0.5 } } }
   },
   {
@@ -123,15 +123,8 @@
     "explode_in_fire": true,
     "explosion": { "power": 600, "shrapnel": { "casing_mass": 3214, "fragment_mass": 0.5 } },
     "color": "light_gray",
-    "use_action": {
-      "need_wielding": true,
-      "target": "EMPbomb_act",
-      "msg": "You activate the EMP bomb.",
-      "target_timer": "50 seconds",
-      "menu_text": "Activate",
-      "type": "transform"
-    },
-    "flags": [ "RADIO_MODABLE", "RADIO_INVOKE_PROC", "BOMB", "GRENADE", "WATER_BREAK" ],
+    "use_action": { "target": "EMPbomb_act", "msg": "You activate the EMP bomb.", "menu_text": "Activate", "type": "transform" },
+    "flags": [ "RADIO_MODABLE", "RADIO_INVOKE_PROC", "BOMB", "GRENADE", "WATER_BREAK", "ALLOWS_REMOTE_USE" ],
     "melee_damage": { "bash": 12 }
   },
   {
@@ -141,6 +134,7 @@
     "copy-from": "EMPbomb",
     "description": "This EMP bomb is active and will shortly detonate, creating a large EMP field that damages robots and drains bionic energy, as well as a sizeable explosion.  You may not want to be holding it much longer.",
     "use_action": { "type": "message", "message": "You've already activated the %s.  Get rid of it and clear out!", "name": "Activate" },
+    "countdown_interval": "50 seconds",
     "countdown_action": {
       "type": "explosion",
       "draw_explosion_radius": 10,
@@ -166,7 +160,6 @@
     "use_action": {
       "type": "transform",
       "target": "firecracker_act",
-      "target_timer": "2 seconds",
       "msg": "You light the firecracker.",
       "need_fire": 1,
       "menu_text": "Light up"
@@ -180,6 +173,7 @@
     "description": "A firecracker that has been lit; the fuse is hissing.  Throw it quickly before it explodes.",
     "tick_action": [ { "type": "sound", "sound_message": "ssss…", "sound_volume": 0, "sound_id": "misc", "sound_variant": "lit_fuse" } ],
     "countdown_action": { "type": "sound", "sound_message": "Bang!", "sound_volume": 20, "sound_id": "explosion", "sound_variant": "small" },
+    "countdown_interval": "2 seconds",
     "use_action": { "type": "message", "message": "You've already lit the fuse, try throwing it instead.", "name": "Light up" },
     "flags": [ "DANGEROUS", "SPAWN_ACTIVE" ]
   },
@@ -236,7 +230,6 @@
       "need_wielding": true,
       "target": "flashbang_act",
       "msg": "You pull the pin on the %s.",
-      "target_timer": "2 seconds",
       "menu_text": "Pull pin",
       "type": "transform"
     },
@@ -250,6 +243,7 @@
     "copy-from": "flashbang",
     "description": "This flashbang is active, and will soon detonate with intense light and sound, blinding, deafening, and disorienting anyone nearby.  It may be a good idea to throw it!",
     "use_action": { "type": "message", "message": "You've already pulled the pin, try throwing it instead.", "name": "Pull pin" },
+    "countdown_interval": "2 seconds",
     "countdown_action": { "type": "explosion", "do_flashbang": true },
     "flags": [ "DANGEROUS", "SPAWN_ACTIVE" ]
   },
@@ -266,7 +260,6 @@
       "menu_text": "Pull pin",
       "msg": "You pull the pin on the %s.",
       "type": "transform",
-      "target_timer": "50 seconds",
       "target": "fungicidalbomb_act"
     }
   },
@@ -291,7 +284,6 @@
       "menu_text": "Pull pin",
       "msg": "You pull the pin on the %s.",
       "type": "transform",
-      "target_timer": "50 seconds",
       "target": "fungicidalbomb_makeshift_act"
     }
   },
@@ -315,7 +307,6 @@
       "need_wielding": true,
       "target": "gasbomb_makeshift_act",
       "msg": "You pull the pin on the %s.",
-      "target_timer": "10 seconds",
       "menu_text": "Pull pin",
       "type": "transform"
     },
@@ -330,6 +321,7 @@
     "description": "This homemade canister of poison gas has been unsealed, and is (or will shortly be) expelling highly toxic gas.  You should consider getting rid of it soon.",
     "use_action": { "type": "message", "message": "You've already pulled the pin, try throwing it instead.", "name": "Pull pin" },
     "revert_to": "canister_empty",
+    "countdown_interval": "3 seconds",
     "countdown_action": {
       "type": "explosion",
       "fields_type": "fd_toxic_gas",
@@ -360,7 +352,6 @@
       "need_wielding": true,
       "target": "grenade_act",
       "msg": "You pull the pin on the %s.",
-      "target_timer": "5 seconds",
       "menu_text": "Pull pin",
       "type": "transform"
     },
@@ -399,7 +390,6 @@
       "need_wielding": true,
       "target": "grenade_emp_act",
       "msg": "You pull the pin on the %s.",
-      "target_timer": "3 seconds",
       "menu_text": "Pull pin",
       "type": "transform"
     },
@@ -413,6 +403,7 @@
     "copy-from": "grenade_emp",
     "description": "This EMP grenade is active and will shortly detonate, creating a large EMP field that damages robots and drains bionic energy, as well as a mild electric shock cloud.  You may not want to be holding it much longer.",
     "use_action": { "type": "message", "message": "You've already pulled the pin, try throwing it instead.", "name": "Pull pin" },
+    "countdown_interval": "3 seconds",
     "countdown_action": {
       "type": "explosion",
       "fields_type": "fd_electricity",
@@ -442,7 +433,6 @@
       "need_wielding": true,
       "target": "grenade_inc_act",
       "msg": "You pull the pin on the %s.",
-      "target_timer": "5 seconds",
       "menu_text": "Pull pin",
       "type": "transform"
     },
@@ -455,6 +445,7 @@
     "subtypes": [ "TOOL" ],
     "copy-from": "grenade_inc",
     "description": "An active incendiary grenade, likely to burst into an inferno any second now.  Better throw it!",
+    "countdown_interval": "5 seconds",
     "countdown_action": "GRENADE_INC_ACT",
     "flags": [ "ACT_IN_FIRE", "DANGEROUS", "SPAWN_ACTIVE" ]
   },
@@ -479,7 +470,6 @@
       "menu_text": "Pull pin",
       "msg": "You pull the pin on the %s.",
       "type": "transform",
-      "target_timer": "50 seconds",
       "target": "gasbomb_act"
     },
     "flags": [ "RADIO_MODABLE", "RADIO_INVOKE_PROC", "BOMB", "GRENADE", "CYLINDER_GRENADE" ]
@@ -494,6 +484,7 @@
     "description": "This tear gas grenade has had its pin removed and is (or will shortly be) expelling highly noxious gas.",
     "use_action": { "type": "message", "message": "You've already pulled the pin, try throwing it instead.", "name": "Pull pin" },
     "emits": [ "emit_tear_gas_stream" ],
+    "countdown_interval": "50 seconds",
     "revert_to": "canister_empty",
     "flags": [ "DANGEROUS", "SPAWN_ACTIVE" ]
   },
@@ -510,7 +501,6 @@
       "menu_text": "Pull pin",
       "msg": "You pull the pin on the %s.",
       "type": "transform",
-      "target_timer": "50 seconds",
       "target": "insecticidalbomb_act"
     }
   },
@@ -535,7 +525,6 @@
       "menu_text": "Pull pin",
       "msg": "You pull the pin on the %s.",
       "type": "transform",
-      "target_timer": "100 seconds",
       "target": "insecticidalbomb_makeshift_act"
     }
   },
@@ -545,6 +534,7 @@
     "type": "ITEM",
     "name": { "str": "makeshift insecticidal gas grenade" },
     "description": "This makeshift insecticidal grenade has had its pin removed and is (or will shortly be) expelling highly toxic gas.",
+    "countdown_interval": "100 seconds",
     "emits": [ "emit_small_insecticidal_stream" ]
   },
   {
@@ -617,6 +607,7 @@
     "subtypes": [ "TOOL", "ARMOR" ],
     "description": "The nuclear bomb looks no different from the outside, yet you know that the device is armed and counting down.  You should probably get far, far away from it.",
     "use_action": { "type": "message", "message": "You've already activated the %s.  Get rid of it and clear out!" },
+    "countdown_interval": "60 seconds",
     "countdown_action": {
       "type": "explosion",
       "fields_type": "fd_nuke_gas",
@@ -743,7 +734,6 @@
       "need_wielding": true,
       "target": "scrambler_act",
       "msg": "You pull the pin on the %s.",
-      "target_timer": "3 seconds",
       "menu_text": "Pull pin",
       "type": "transform"
     },
@@ -757,6 +747,7 @@
     "copy-from": "scrambler",
     "description": "This scrambler grenade is active and will soon detonate, releasing a control wave that temporarily converts robots to your side.",
     "use_action": { "type": "message", "message": "You've already pulled the pin, try throwing it instead.", "name": "Pull pin" },
+    "countdown_interval": "3 seconds",
     "countdown_action": { "type": "explosion", "draw_explosion_radius": 4, "draw_explosion_color": "cyan", "scrambler_blast_radius": 4 },
     "flags": [ "DANGEROUS", "SPAWN_ACTIVE" ]
   },
@@ -775,7 +766,6 @@
       "menu_text": "Pull pin",
       "msg": "You pull the pin on the %s.",
       "type": "transform",
-      "target_timer": "100 seconds",
       "target": "smokebomb_act"
     }
   },
@@ -785,6 +775,7 @@
     "type": "ITEM",
     "description": "This smoke bomb has had its pin removed and is (or will shortly be) expelling thick smoke.",
     "emits": [ "emit_smoke_stream" ],
+    "countdown_interval": "100 seconds",
     "revert_to": "canister_empty",
     "use_action": { "type": "message", "message": "You've already pulled the pin, try throwing it instead.", "name": "Pull pin" },
     "flags": [ "DANGEROUS", "SPAWN_ACTIVE" ]
@@ -807,7 +798,6 @@
       "need_wielding": true,
       "target": "tool_rocket_candy_act",
       "msg": "You light the rocket candy on fire.  Throw it!",
-      "target_timer": "2 seconds",
       "menu_text": { "str": "Light", "ctxt": "verb" },
       "type": "transform"
     },
@@ -825,6 +815,7 @@
       "message": "You've already lit the rocket candy, try throwing it instead.",
       "name": { "str": "Light", "ctxt": "verb" }
     },
+    "countdown_interval": "2 seconds",
     "countdown_action": {
       "type": "explosion",
       "fields_type": "fd_smoke",
@@ -855,7 +846,6 @@
       "need_wielding": true,
       "target": "military_explosive_small_grenade_act",
       "msg": "You light the fuse on the improvised grenade.  Throw it before it blows up in your face!",
-      "target_timer": "5 seconds",
       "need_fire": 1,
       "menu_text": "Light fuse",
       "type": "transform"
@@ -869,6 +859,7 @@
     "subtypes": [ "TOOL" ],
     "description": "The fuse on this improvised grenade is lit, and it will explode any second now.  Better throw it!",
     "use_action": { "type": "message", "message": "You've already lit the fuse, try throwing it instead.", "name": "Light fuse" },
+    "countdown_interval": "5 seconds",
     "countdown_action": { "type": "explosion", "explosion": { "power": 460, "shrapnel": { "casing_mass": 200, "fragment_mass": 0.4 } } },
     "flags": [ "DANGEROUS", "SPAWN_ACTIVE" ]
   },
@@ -891,7 +882,6 @@
       "need_wielding": true,
       "target": "military_explosive_grenade_act",
       "msg": "You light the fuse on the improvised grenade.  Throw it before it blows up in your face!",
-      "target_timer": "5 seconds",
       "need_fire": 1,
       "menu_text": "Light fuse",
       "type": "transform"
@@ -905,6 +895,7 @@
     "subtypes": [ "TOOL" ],
     "description": "The fuse on this improvised grenade is lit, and it will explode any second now.  Better throw it!",
     "use_action": { "type": "message", "message": "You've already lit the fuse, try throwing it instead.", "name": "Light fuse" },
+    "countdown_interval": "5 seconds",
     "countdown_action": { "type": "explosion", "explosion": { "power": 920, "shrapnel": { "casing_mass": 400, "fragment_mass": 0.4 } } },
     "flags": [ "DANGEROUS", "SPAWN_ACTIVE" ]
   },
@@ -930,7 +921,6 @@
       "need_wielding": true,
       "target": "military_explosive_pipebomb_act",
       "msg": "You pull the pin on the %s.",
-      "target_timer": "5 seconds",
       "menu_text": "Pull pin",
       "type": "transform"
     },
@@ -945,6 +935,7 @@
     "looks_like": "pipebomb_act",
     "description": "This pipebomb's pin is pulled, and it will explode any second now.  Throw it immediately!",
     "use_action": { "type": "message", "message": "You've already pulled the pin, try throwing it instead.", "name": "Pull pin" },
+    "countdown_interval": "5 seconds",
     "countdown_action": { "type": "explosion", "explosion": { "power": 920, "shrapnel": { "casing_mass": 410, "fragment_mass": 0.5 } } },
     "flags": [ "DANGEROUS", "SPAWN_ACTIVE" ]
   },
@@ -966,7 +957,6 @@
       "need_wielding": true,
       "target": "military_explosive_bomb_act",
       "msg": "You pull the pin on the %s.",
-      "target_timer": "20 seconds",
       "menu_text": "Pull pin",
       "type": "transform"
     },
@@ -981,6 +971,7 @@
     "description": "A homemade explosive device, consisting of a large plastic jug filled with military explosives and scrap metal.  Its fuse has been lit, its final countdown starting.",
     "color": "light_red",
     "use_action": { "type": "message", "message": "You've already activated the %s.  Get rid of it and clear out!", "name": "Pull pin" },
+    "countdown_interval": "20 seconds",
     "countdown_action": {
       "type": "explosion",
       "explosion": { "power": 6970, "shrapnel": { "casing_mass": 3000, "fragment_mass": 0.5, "drop": "scrap", "recovery": 20 } }
@@ -1007,7 +998,6 @@
     "use_action": {
       "target": "military_explosive_half_barrel_bomb_act",
       "msg": "You activate the fuse on the barrel bomb.  Clear the area!",
-      "target_timer": "100 seconds",
       "menu_text": "Activate fuse",
       "type": "transform"
     },
@@ -1027,6 +1017,7 @@
       "message": "You've already activated the %s.  Get rid of it and clear out!",
       "name": "Activate fuse"
     },
+    "countdown_interval": "100 seconds",
     "countdown_action": { "type": "explosion", "explosion": { "power": 100000, "shrapnel": { "casing_mass": 12600, "fragment_mass": 600 } } },
     "flags": [ "DANGEROUS", "SPAWN_ACTIVE" ]
   },
@@ -1050,7 +1041,6 @@
     "use_action": {
       "target": "military_explosive_full_barrel_bomb_act",
       "msg": "You activate the fuse on the barrel bomb.  Clear the area!",
-      "target_timer": "100 seconds",
       "menu_text": "Activate fuse",
       "type": "transform"
     },
@@ -1070,6 +1060,7 @@
       "message": "You've already activated the %s.  Get rid of it and clear out!",
       "name": "Activate fuse"
     },
+    "countdown_interval": "100 seconds",
     "countdown_action": { "type": "explosion", "explosion": { "power": 200000, "shrapnel": { "casing_mass": 12600, "fragment_mass": 600 } } },
     "flags": [ "DANGEROUS", "SPAWN_ACTIVE" ]
   },
@@ -1093,7 +1084,6 @@
       "need_wielding": true,
       "target": "small_homemade_grenade_act",
       "msg": "You light the fuse on the improvised grenade.  Throw it before it blows up in your face!",
-      "target_timer": "5 seconds",
       "need_fire": 1,
       "menu_text": "Light fuse",
       "type": "transform"
@@ -1107,6 +1097,7 @@
     "subtypes": [ "TOOL" ],
     "description": "The fuse on this improvised grenade is lit, and it will explode any second now.  Better throw it!",
     "use_action": { "type": "message", "message": "You've already lit the fuse, try throwing it instead.", "name": "Light fuse" },
+    "countdown_interval": "5 seconds",
     "countdown_action": { "type": "explosion", "explosion": { "power": 150, "shrapnel": { "casing_mass": 200, "fragment_mass": 0.4 } } },
     "flags": [ "DANGEROUS", "SPAWN_ACTIVE" ]
   },
@@ -1128,7 +1119,6 @@
       "need_wielding": true,
       "target": "homemade_grenade_act",
       "msg": "You light the fuse on the improvised grenade.  Throw it before it blows up in your face!",
-      "target_timer": "5 seconds",
       "need_fire": 1,
       "menu_text": "Light fuse",
       "type": "transform"
@@ -1142,6 +1132,7 @@
     "subtypes": [ "TOOL" ],
     "description": "The fuse on this improvised grenade is lit, and it will explode any second now.  Better throw it!",
     "use_action": { "type": "message", "message": "You've already lit the fuse, try throwing it instead.", "name": "Light fuse" },
+    "countdown_interval": "5 seconds",
     "countdown_action": { "type": "explosion", "explosion": { "power": 300, "shrapnel": { "casing_mass": 400, "fragment_mass": 0.4 } } },
     "flags": [ "DANGEROUS", "SPAWN_ACTIVE" ]
   },
@@ -1168,7 +1159,6 @@
       "need_wielding": true,
       "target": "pipebomb_act",
       "msg": "You light the fuse on the pipe bomb.",
-      "target_timer": "6 seconds",
       "need_fire": 1,
       "menu_text": "Light fuse",
       "type": "transform"
@@ -1183,6 +1173,7 @@
     "copy-from": "pipebomb",
     "description": "This pipebomb's fuse is lit, and it will explode any second now.  Throw it immediately!",
     "use_action": { "type": "message", "message": "You've already lit the fuse, try throwing it instead.", "name": "Light fuse" },
+    "countdown_interval": "6 seconds",
     "countdown_action": { "type": "explosion", "explosion": { "power": 300, "shrapnel": { "casing_mass": 410, "fragment_mass": 0.5 } } },
     "flags": [ "DANGEROUS", "SPAWN_ACTIVE" ]
   },
@@ -1205,7 +1196,6 @@
       "need_wielding": true,
       "target": "homemade_bomb_act",
       "msg": "You light the fuse on the bomb.  Get rid of it quickly!",
-      "target_timer": "20 seconds",
       "menu_text": "Light fuse",
       "type": "transform"
     },
@@ -1219,6 +1209,7 @@
     "description": "A homemade explosive device, consisting of a large plastic jug filled with stable explosives and scrap metal.  Its fuse has been lit, its final countdown starting.",
     "color": "light_red",
     "use_action": { "type": "message", "message": "You've already lit the fuse.  Get rid of it and clear out!", "name": "Light fuse" },
+    "countdown_interval": "20 seconds",
     "countdown_action": {
       "type": "explosion",
       "explosion": { "power": 2320, "shrapnel": { "casing_mass": 3000, "fragment_mass": 0.5, "drop": "scrap", "recovery": 20 } }
@@ -1244,7 +1235,6 @@
     "use_action": {
       "target": "homemade_demolition_charge_act",
       "msg": "You light the fuse on the bomb.  Get rid of it quickly!",
-      "target_timer": "20 seconds",
       "need_fire": 1,
       "menu_text": "Light fuse",
       "type": "transform"
@@ -1259,6 +1249,7 @@
     "copy-from": "homemade_demolition_charge",
     "description": "The fuse on this primitive demolition charge is lit and hissing.  It'll explode any moment now.",
     "use_action": { "type": "message", "message": "You've already lit the fuse.  Get rid of it and clear out!", "name": "Light fuse" },
+    "countdown_interval": "20 seconds",
     "countdown_action": { "type": "explosion", "explosion": { "power": 2590 } },
     "flags": [ "DANGEROUS", "SPAWN_ACTIVE" ]
   },
@@ -1281,7 +1272,6 @@
     "use_action": {
       "target": "half_barrel_bomb_act",
       "msg": "You activate the fuse on the barrel bomb.  Clear the area!",
-      "target_timer": "100 seconds",
       "menu_text": "Activate fuse",
       "type": "transform"
     },
@@ -1300,6 +1290,7 @@
       "message": "You've already activated the %s.  Get rid of it and clear out!",
       "name": "Activate fuse"
     },
+    "countdown_interval": "100 seconds",
     "countdown_action": { "type": "explosion", "explosion": { "power": 34400, "shrapnel": { "casing_mass": 12600, "fragment_mass": 600 } } },
     "flags": [ "DANGEROUS", "SPAWN_ACTIVE" ]
   },
@@ -1322,7 +1313,6 @@
     "use_action": {
       "target": "full_barrel_bomb_act",
       "msg": "You activate the fuse on the barrel bomb.  Clear the area!",
-      "target_timer": "100 seconds",
       "menu_text": "Activate fuse",
       "type": "transform"
     },
@@ -1341,6 +1331,7 @@
       "message": "You've already activated the %s.  Get rid of it and clear out!",
       "name": "Activate fuse"
     },
+    "countdown_interval": "100 seconds",
     "countdown_action": { "type": "explosion", "explosion": { "power": 69200, "shrapnel": { "casing_mass": 12000, "fragment_mass": 600 } } },
     "flags": [ "DANGEROUS", "SPAWN_ACTIVE" ]
   },

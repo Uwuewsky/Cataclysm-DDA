@@ -695,6 +695,7 @@
     "type": "ITEM",
     "subtypes": [ "TOOL" ],
     "copy-from": "gelled_molotov",
+    "looks_like": "molotov_lit",
     "light": 15,
     "use_action": { "type": "explosion", "explosion": { "power": 0 }, "effects": [ "GELLED_MOLOTOV" ] },
     "tick_action": [
@@ -834,7 +835,7 @@
     "type": "ITEM",
     "subtypes": [ "TOOL" ],
     "name": { "str": "military explosive small homemade grenade" },
-    "looks_like": "grenade",
+    "looks_like": "homemade_grenade",
     "description": "An improvised explosive device cobbled together from parts.  Use this item to light the fuse.  You will then have five seconds before it explodes; throwing it would be a good idea.",
     "weight": "600 g",
     "volume": "270 ml",
@@ -857,6 +858,7 @@
   {
     "id": "military_explosive_small_grenade_act",
     "copy-from": "military_explosive_small_grenade",
+    "looks_like": "homemade_grenade_act",
     "type": "ITEM",
     "subtypes": [ "TOOL" ],
     "description": "The fuse on this improvised grenade is lit, and it will explode any second now.  Better throw it!",
@@ -868,6 +870,7 @@
   {
     "id": "military_explosive_grenade",
     "copy-from": "grenade",
+    "looks_like": "homemade_grenade",
     "type": "ITEM",
     "subtypes": [ "TOOL" ],
     "name": { "str": "military explosive homemade grenade" },
@@ -893,6 +896,7 @@
   {
     "id": "military_explosive_grenade_act",
     "copy-from": "military_explosive_grenade",
+    "looks_like": "homemade_grenade_act",
     "type": "ITEM",
     "subtypes": [ "TOOL" ],
     "description": "The fuse on this improvised grenade is lit, and it will explode any second now.  Better throw it!",
@@ -1030,7 +1034,7 @@
     "category": "weapons",
     "name": { "str": "military explosive 100 L barrel bomb" },
     "description": "A 100 L metal barrel filled with military explosives.  Once it has been activated it will explode after 100 seconds, raining fire and steel on everything in sight.",
-    "looks_like": "half_barrel_bomb",
+    "looks_like": "full_barrel_bomb",
     "weight": "172 kg",
     "volume": "105 L",
     "price": "900 USD",
@@ -1054,7 +1058,7 @@
     "type": "ITEM",
     "subtypes": [ "TOOL" ],
     "copy-from": "military_explosive_full_barrel_bomb",
-    "looks_like": "half_barrel_bomb_act",
+    "looks_like": "full_barrel_bomb_act",
     "description": "A 100 L metal barrel filled with military explosives.  It has been activated and will soon explode, delivering its entire destructive power to everything in sight.",
     "color": "light_red",
     "use_action": {
@@ -1095,6 +1099,7 @@
   {
     "id": "small_homemade_grenade_act",
     "copy-from": "small_homemade_grenade",
+    "looks_like": "homemade_grenade_act",
     "type": "ITEM",
     "subtypes": [ "TOOL" ],
     "description": "The fuse on this improvised grenade is lit, and it will explode any second now.  Better throw it!",
@@ -1130,6 +1135,7 @@
   {
     "id": "homemade_grenade_act",
     "copy-from": "homemade_grenade",
+    "looks_like": "grenade_act",
     "type": "ITEM",
     "subtypes": [ "TOOL" ],
     "description": "The fuse on this improvised grenade is lit, and it will explode any second now.  Better throw it!",
@@ -1144,7 +1150,6 @@
     "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": { "str": "pipebomb" },
-    "looks_like": "pipebomb",
     "description": "A section of steel pipe filled with explosives.  Use this item to light the fuse, giving you six seconds to get away from it before it detonates.  You'll need a lighter or some matches to use it.",
     "weight": "840 g",
     "//": "Only one third (410 g) of a whole pipe is being used",
@@ -1233,6 +1238,7 @@
     "material": [ "plastic", "powder" ],
     "symbol": "*",
     "color": "red",
+    "looks_like": "homemade_bomb",
     "explode_in_fire": true,
     "explosion": { "power": 2590 },
     "use_action": {
@@ -1250,6 +1256,7 @@
     "type": "ITEM",
     "subtypes": [ "TOOL" ],
     "copy-from": "homemade_demolition_charge",
+    "looks_like": "homemade_bomb_act",
     "description": "The fuse on this primitive demolition charge is lit and hissing.  It'll explode any moment now.",
     "use_action": { "type": "message", "message": "You've already lit the fuse.  Get rid of it and clear out!", "name": "Light fuse" },
     "countdown_interval": "20 seconds",
@@ -1311,6 +1318,7 @@
     "material": [ "steel" ],
     "symbol": "(",
     "color": "red",
+    "looks_like": "half_barrel_bomb",
     "explode_in_fire": true,
     "explosion": { "power": 69200, "shrapnel": { "casing_mass": 12000, "fragment_mass": 600 } },
     "use_action": {
@@ -1328,6 +1336,7 @@
     "subtypes": [ "TOOL" ],
     "copy-from": "full_barrel_bomb",
     "description": "A 100 L metal barrel filled with military explosives.  It has been activated and will soon explode, delivering its entire destructive power to everything in sight.",
+    "looks_like": "half_barrel_bomb_act",
     "color": "light_red",
     "use_action": {
       "type": "message",

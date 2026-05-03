@@ -923,6 +923,8 @@
     "material": [ "steel" ],
     "symbol": "*",
     "color": "light_gray",
+    "explode_in_fire": true,
+    "explosion": { "power": 920, "shrapnel": { "casing_mass": 410, "fragment_mass": 0.5 } },
     "use_action": {
       "need_wielding": true,
       "target": "military_explosive_pipebomb_act",
@@ -959,6 +961,8 @@
     "material": [ "steel", "plastic" ],
     "symbol": "*",
     "color": "red",
+    "explode_in_fire": true,
+    "explosion": { "power": 6970, "shrapnel": { "casing_mass": 3000, "fragment_mass": 0.5, "drop": "scrap", "recovery": 20 } },
     "use_action": {
       "need_wielding": true,
       "target": "military_explosive_bomb_act",
